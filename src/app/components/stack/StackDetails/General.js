@@ -18,6 +18,12 @@ const General = (props) => {
         </p>
       </div>
       <div className="form-group">
+        <label className="col-sm-2 control-label">Domain</label>
+        <p className="form-control-static d-inline-block">
+          { props.domain }
+        </p>
+      </div>
+      <div className="form-group">
         <label className="col-sm-2 control-label">Created At</label>
         <p className="form-control-static d-inline-block">
           { moment(props.created).format("MMMM Do YYYY, h:mm:ss a") }

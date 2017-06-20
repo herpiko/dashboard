@@ -54,6 +54,7 @@ export default class StackDetails extends React.Component {
                 <General
                   Id={stack.Id}
                   name={stack.Name.split('-')[1]}
+                  domain={stack.Labels['orcinus.domain']}
                   created={stack.Created} />
               }
               </div>

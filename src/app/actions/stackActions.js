@@ -113,10 +113,12 @@ export function checkStackAPI(stack) {
 	}
 }
 
-export function createStack(stackName) {
+export function createStack(stackName, domain) {
+        var data = { name : stackName };
+        if (domain) data.domain = domain;
 	const request = axios({
 		method: 'post',
-		data: JSON.parse(`{ "name" : "${stackName}" }`),
+		data: data,
 		url: `${ ROOT_URL }/stack/create`,
 		headers: {
 			'Content-Type': 'application/json',

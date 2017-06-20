@@ -77,7 +77,7 @@ const mapDispatchToProps = (dispatch) => {
       if (!domain || !newService) {
         return new Error('No domain or service defined');
       }
-      dispatch(createStack(newService.opt.stack)).then((response) => {
+      dispatch(createStack(newService.opt.stack, domain)).then((response) => {
         if(response.value.status !== 200) {
           return dispatch(createService(newService))
         }
